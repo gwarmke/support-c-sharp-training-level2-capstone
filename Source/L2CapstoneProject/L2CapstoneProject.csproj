@@ -55,6 +55,7 @@
     <Compile Include="frmOffset.Designer.cs">
       <DependentUpon>frmOffset.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhaseAmplitudeOffset.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBeamformerPavtController.resx">

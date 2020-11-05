@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NationalInstruments.Restricted;
+using System;
 using System.Windows.Forms;
 
 namespace L2CapstoneProject
@@ -23,11 +24,33 @@ namespace L2CapstoneProject
                     this.Text = "Edit Offset";
                     break;
             }
+
+
+        }
+
+        public decimal getPhase()
+        {
+            return numPhase.Value;
+        }
+
+        public decimal getAmp()
+        {
+            return numAmp.Value;
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        public void numPhase_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void numAmp_ValueChanged(object sender, EventArgs e)
+        {
+            decimal ampValue = numAmp.Value;
         }
     }
 }

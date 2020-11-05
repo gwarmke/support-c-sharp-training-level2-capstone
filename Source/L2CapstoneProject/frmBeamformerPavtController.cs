@@ -124,7 +124,23 @@ namespace L2CapstoneProject
 
             if (r == DialogResult.OK)
             {
-                // Add the offset to the listview
+                // Add the offset to the listview (lsvOffsets)
+
+                // Create new variable to hold phase and amplitude values
+                PhaseAmplitudeOffset newValue = new PhaseAmplitudeOffset
+                {
+                    Phase = dialog.getPhase(),
+                    Amplitude = dialog.getAmp()
+                };
+
+                // create new listview item to store phase/amp values and add to list
+                ListViewItem newItem;
+                string[] arr = new string[2];
+                arr[0] = newValue.Phase.ToString();
+                arr[1] = newValue.Amplitude.ToString();
+                newItem = new ListViewItem(arr);
+                lsvOffsets.Items.Add(newItem);
+
             }
         }
         private void EditOffset(int selected)
